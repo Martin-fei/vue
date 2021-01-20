@@ -1,9 +1,8 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <router-link to="/a">a</router-link>
+      <button @click="toa">a</button>
+      <button @click="toc">c</button>
     <router-view/>
   </div>
 </template>
@@ -30,3 +29,16 @@
   color: #42b983;
 }
 </style>
+<script>
+export default {
+  methods:{
+    toa(){
+      this.$router.push({path:"/a"})
+    },
+    toc(){
+      // this.$router.push({path:"/c",query:{name:'jack'}})
+      this.$router.push({name:"C",query:{name:'jack'}})
+    }
+  }
+}
+</script>
